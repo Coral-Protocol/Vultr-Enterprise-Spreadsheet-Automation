@@ -100,6 +100,9 @@ yarn dev --host
 
 ![Coral Server and Studio Running](images/server-studio.png)
 
+- On Coral Studio, ensure the connection to Coral Server.
+
+![Coral Server and Studio Connection UI](images/coral-connection.png)
 
 <details>
 
