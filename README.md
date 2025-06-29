@@ -55,6 +55,11 @@ Each team leader of the Vultr Track will receive a coupon code to claim $250 in 
 
 ### Vultr Track: How to setup Coral on Vultr
 
+
+#### 1. Set up Vultr
+
+<details>
+
 - Sign up on Vultr and know more by looking into the [product documentation](https://docs.vultr.com/products)
 
 - Choose and host an instance as per your system requirements
@@ -67,13 +72,120 @@ Each team leader of the Vultr Track will receive a coupon code to claim $250 in 
 ssh root@95.179.233.169
 ```
 
+</details>
+
+#### 2. Setup the Agents
+
+
 <details>
 
-### 1. How to run:
+- In this example, we are using the agent:[Coral Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent) and [Coral Pandas Agent](https://github.com/Coral-Protocol/Coral-Pandas-Agent). Please click and link and set up the agents by following the setup instructions in the repository.
 
-1. Follow the steps in [How to Build a Multi-Agent System with Awesome Open Source Agents using Coral Protocol](https://github.com/Coral-Protocol/existing-agent-sessions-tutorial-private-temp)
+</details>
 
-2. Build your multi-agent system and clone your system/ agent repository on the server and run.
+#### 3. Run the Agents
+
+You can run in either of the below modes to get your system running.  
+
+- The Executable Model is part of the Coral Protocol Orchestrator which works with [Coral Studio UI](https://github.com/Coral-Protocol/coral-studio).  
+- The Dev Mode allows the Coral Server and all agents to be seaprately running on each terminal without UI support.  
+
+### 1. Executable Mode
+
+Checkout: [How to Build a Multi-Agent System with Awesome Open Source Agents using Coral Protocol](https://github.com/Coral-Protocol/existing-agent-sessions-tutorial-private-temp) and update the file: `coral-server/src/main/resources/application.yaml` with the details below, then run the [Coral Server](https://github.com/Coral-Protocol/coral-server) and [Coral Studio UI](https://github.com/Coral-Protocol/coral-studio). You do not need to set up the `.env` in the project directory for running in this mode; it will be captured through the variables below.
+
+<details>
+
+For Linux or MAC:
+
+```bash
+# PROJECT_DIR="/PATH/TO/YOUR/PROJECT"
+
+applications:
+  - id: "app"
+    name: "Default Application"
+    description: "Default application for testing"
+    privacyKeys:
+      - "default-key"
+      - "public"
+      - "priv"
+
+registry:
+  interface:
+    options:
+      - name: "API_KEY"
+        type: "string"
+        description: "API key for the service"
+    runtime:
+      type: "executable"
+      command: ["bash", "-c", "${PROJECT_DIR}/Coral-Interface-Agent/run_agent.sh main.py"]
+      environment:
+        - name: "API_KEY"
+          from: "API_KEY"
+        - name: "MODEL_NAME"
+          value: "gpt-4.1"
+        - name: "MODEL_PROVIDER"
+          value: "openai"
+        - name: "MODEL_TOKEN"
+          value: "16000"
+        - name: "MODEL_TEMPERATURE"
+          value: "0.3"
+          
+  pandas:
+    options:
+      - name: "API_KEY"
+        type: "string"
+        description: "API key for the service"
+    runtime:
+      type: "executable"
+      command: ["bash", "-c", "${PROJECT_DIR}/Coral-Pandas-Agent/run_agent.sh main.py"]
+      environment:
+        - name: "API_KEY"
+          from: "API_KEY"
+        - name: "MODEL_NAME"
+          value: "gpt-4.1"
+        - name: "MODEL_PROVIDER"
+          value: "openai"
+        - name: "MODEL_TOKEN"
+          value: "16000"
+        - name: "MODEL_TEMPERATURE"
+          value: "0.3"
+
+```
+
+For Windows, create a powershell command (run_agent.ps1) and run:
+
+```bash
+command: ["powershell","-ExecutionPolicy", "Bypass", "-File", "${PROJECT_DIR}/run_agent.ps1","main.py"]
+```
+
+</details>
+
+### 2. Dev Mode
+
+Ensure that the [Coral Server](https://github.com/Coral-Protocol/coral-server) is running on your system and run below commands in separate terminals.
+
+<details>
+
+Run the Interface Agent
+
+```bash
+# cd to directory
+cd Coral-Interface-Agent
+
+# Run the agent using `uv`:
+uv run python main.py
+```
+
+Run the Pandas Agent
+
+```bash
+# cd to directory
+cd Coral-Pandas-Agent
+
+# Run the agent using `uv`:
+uv run python main.py
+```
 
 </details>
 
