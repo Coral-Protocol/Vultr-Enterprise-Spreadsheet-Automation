@@ -229,6 +229,8 @@ registry:
 
 - Ensure that the [Coral Server](https://github.com/Coral-Protocol/coral-server) is running on your system and run below commands in separate terminals.
 
+- Ensure that you have setup the `.env` file with required keys.  
+
 Run the Interface Agent
 
 ```bash
