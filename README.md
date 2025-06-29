@@ -72,9 +72,11 @@ Each team leader of the Vultr Track will receive a coupon code to claim $250 in 
 ```bash
 ssh root@95.179.233.169
 ```
-
+</details>
 
 ### 2. Setup Coral Server and Coral Studio
+
+<details>
 
 - After you are logged into Vultr from your terminal, it is time to setup the [Coral Server](https://github.com/Coral-Protocol/coral-server) and [Coral Studio UI](https://github.com/Coral-Protocol/coral-studio).
 
