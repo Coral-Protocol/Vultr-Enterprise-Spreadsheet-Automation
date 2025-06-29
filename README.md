@@ -230,6 +230,9 @@ registry:
 
 - You do not need to set up the `.env` in the project directory for running in this mode; it will be captured through the variables below.  
 
+- After the agents are loaded properly, you will see "2 agents" connected. Proceed ahead with "Select Session", add the agents, api key and esure to add both the Custom Tools to the Interface Agent.
+
+![Vultr Instance](images/agent-connected.png)  
 
 </details>
 
