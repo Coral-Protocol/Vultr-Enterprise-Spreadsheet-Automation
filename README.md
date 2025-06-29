@@ -78,9 +78,10 @@ ssh root@95.179.233.169
 ### 2. Setup the Agents
 
 
-<details>
+<details>  
 
-In this example, we are using the agent:[Coral Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent) and [Coral Pandas Agent](https://github.com/Coral-Protocol/Coral-Pandas-Agent). Please click on the link and set up the agents by following the setup instructions in the repository.
+- In this example, we are using the agent:[Coral Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent) and [Coral Pandas Agent](https://github.com/Coral-Protocol/Coral-Pandas-Agent).  
+- Please click on the link and set up the agents by following the setup instructions in the repository.  
 
 </details>
 
