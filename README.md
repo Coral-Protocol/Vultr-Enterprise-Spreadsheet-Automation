@@ -83,6 +83,7 @@ ssh root@95.179.233.169
 - After you are logged into Vultr from your terminal, it is time to setup the agents.  
 - In this example, we are using the agents: [Coral Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent) and [Coral Pandas Agent](https://github.com/Coral-Protocol/Coral-Pandas-Agent).  
 - Please click on the link and set up the agents by following the setup instructions in the repository.  
+- Check the output below to see how the terminal will look after succesfull installation, keep in mind the directory you are at while doing `uv sync`.
 
 ![Vultr Instance Terminal After Agent Setup](images/vultr-instance-terminal.png)
 
