@@ -190,7 +190,7 @@ uv run python main.py
 
 </details>
 
-</<details>>
+</details>
 
 (NOTE: The examples above are just to demonstrate how to use Coral. For the hackathon you have to create you own use case by either selecting from the list of agents from our [awesome agent list](https://github.com/Coral-Protocol/awesome-agents-for-multi-agent-systems) or create your own agents compatible on Coral.)
 
