@@ -146,7 +146,7 @@ yarn -v
 
 <details>
 
-**You can run in either of the below modes to get your system running.**
+<summary>You can run in either of the below modes to get your system running.</summary>
 
 #### 1. Executable Mode
 
