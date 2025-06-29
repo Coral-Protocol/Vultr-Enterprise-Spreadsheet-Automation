@@ -166,7 +166,7 @@ yarn -v
 
 <details>
 
-<summary>Exapand this to update `application.yaml` with this code</summary>
+<summary>Expand this to update `application.yaml` with this code</summary>
 
 ```bash
 # replace "root" with YOUR/PROJECT/DIRECTORY if different
