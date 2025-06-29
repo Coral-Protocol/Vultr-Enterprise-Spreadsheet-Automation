@@ -96,7 +96,7 @@ sudo ufw allow 5173
 # run studio using --host
 yarn dev --host
 ```
-- You will see both running like this simultaneously if succesful.
+- You will see both running like this simultaneously if succesful and should be able to access Coral Studio from your browser.
 
 ![Coral Server and Studio Running](images/server-studio.png)
 
@@ -133,6 +133,7 @@ yarn -v
 
 <details>  
 
+- Terminate the Coral Server and Coral Studio connections from above and start below steps.
 - In this example, we are using the agents: [Coral Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent) and [Coral Pandas Agent](https://github.com/Coral-Protocol/Coral-Pandas-Agent).  
 - Please click on the link and set up the agents by following the setup instructions in the repository.  
 - Check the output below to see how the terminal will look after succesfull installation, keep in mind the directory you are at while doing `uv sync`.
