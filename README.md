@@ -78,13 +78,27 @@ ssh root@95.179.233.169
 
 <details>
 
-- After you are logged into Vultr from your terminal, it is time to setup the [Coral Server](https://github.com/Coral-Protocol/coral-server) and [Coral Studio UI](https://github.com/Coral-Protocol/coral-studio).
+- After you are logged into Vultr from your terminal, it is time to setup the [Coral Server](https://github.com/Coral-Protocol/coral-server) and [Coral Studio UI](https://github.com/Coral-Protocol/coral-studio). Follow the steps given in repository to install.
 
-- Coral Server
+- In order to test if both are working, open the same instance in two terminals and run both simultaneously.
 
-- Coral Studio
+- Ensure the server’s firewall allows incoming connections on port 5173 (or the port Studio is using). You may need to open this port using a command like
 
-- Install yarn if unavailable
+```bash
+
+# allow external port access
+sudo ufw allow 5173
+
+# run studio using --host
+yarn dev --host
+```
+- You will see both running like this simultaneously if succesful.
+
+![Coral Server and Studio Running](images/server-studio.png)
+
+- Install yarn if UNAVAILABLE in order to run Coral Studio
+
+<details>
 
 ```bash
 # Download and install nvm:
@@ -106,6 +120,7 @@ corepack enable yarn
 # Verify Yarn version:
 yarn -v
 ```
+</details>
 
 </details>
 
