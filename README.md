@@ -161,9 +161,9 @@ yarn -v
 
 ![Vultr Instance](images/application-changes.png)  
 
-- Run the [Coral Server](https://github.com/Coral-Protocol/coral-server) and [Coral Studio UI](https://github.com/Coral-Protocol/coral-studio). 
+<details>
 
-- You do not need to set up the `.env` in the project directory for running in this mode; it will be captured through the variables below.  
+<summary>Update `application.yaml` with this code</summary>
 
 ```bash
 # replace "root" with YOUR/PROJECT/DIRECTORY if different
@@ -220,6 +220,14 @@ registry:
 
 
 ```
+
+</details>
+
+- Run the [Coral Server](https://github.com/Coral-Protocol/coral-server) and [Coral Studio UI](https://github.com/Coral-Protocol/coral-studio). 
+
+- You do not need to set up the `.env` in the project directory for running in this mode; it will be captured through the variables below.  
+
+
 </details>
 
 #### 2. Dev Mode
