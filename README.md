@@ -86,6 +86,8 @@ In this example, we are using the agent:[Coral Interface Agent](https://github.c
 
 ### 3. Run the Agents
 
+<details>
+
 You can run in either of the below modes to get your system running.  
 
 - The Executable Model is part of the Coral Protocol Orchestrator which works with [Coral Studio UI](https://github.com/Coral-Protocol/coral-studio).  
@@ -187,6 +189,8 @@ cd Coral-Pandas-Agent
 # Run the agent using `uv`:
 uv run python main.py
 ```
+
+</details>
 
 </details>
 
