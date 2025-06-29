@@ -73,14 +73,45 @@ Each team leader of the Vultr Track will receive a coupon code to claim $250 in 
 ssh root@95.179.233.169
 ```
 
+
+### 2. Setup Coral Server and Coral Studio
+
+- After you are logged into Vultr from your terminal, it is time to setup the [Coral Server](https://github.com/Coral-Protocol/coral-server) and [Coral Studio UI](https://github.com/Coral-Protocol/coral-studio).
+
+- Coral Server
+
+- Coral Studio
+
+- Install yarn if unavailable
+
+```bash
+# Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+# in lieu of restarting the shell
+\. "$HOME/.nvm/nvm.sh"
+
+# Download and install Node.js:
+nvm install 22
+
+# Verify the Node.js version:
+node -v # Should print "v22.17.0".
+nvm current # Should print "v22.17.0".
+
+# Download and install Yarn:
+corepack enable yarn
+
+# Verify Yarn version:
+yarn -v
+```
+
 </details>
 
-### 2. Setup the Agents
+### 3. Setup the Agents
 
 
 <details>  
 
-- After you are logged into Vultr from your terminal, it is time to setup the agents.  
 - In this example, we are using the agents: [Coral Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent) and [Coral Pandas Agent](https://github.com/Coral-Protocol/Coral-Pandas-Agent).  
 - Please click on the link and set up the agents by following the setup instructions in the repository.  
 - Check the output below to see how the terminal will look after succesfull installation, keep in mind the directory you are at while doing `uv sync`.
@@ -89,7 +120,7 @@ ssh root@95.179.233.169
 
 </details>
 
-### 3. Run the Agents
+### 4. Run the Agents
 
 <details>
 
