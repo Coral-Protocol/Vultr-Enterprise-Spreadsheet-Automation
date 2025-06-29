@@ -160,7 +160,7 @@ Checkout: [How to Build a Multi-Agent System with Awesome Open Source Agents usi
 For Linux or MAC:
 
 ```bash
-# PROJECT_DIR="/PATH/TO/YOUR/PROJECT"
+# replace "root" with YOUR/PROJECT/DIRECTORY if different
 
 applications:
   - id: "app"
@@ -179,7 +179,7 @@ registry:
         description: "API key for the service"
     runtime:
       type: "executable"
-      command: ["bash", "-c", "${PROJECT_DIR}/Coral-Interface-Agent/run_agent.sh main.py"]
+      command: ["bash", "-c", "/root/Coral-Interface-Agent/run_agent.sh main.py"]
       environment:
         - name: "API_KEY"
           from: "API_KEY"
@@ -199,7 +199,7 @@ registry:
         description: "API key for the service"
     runtime:
       type: "executable"
-      command: ["bash", "-c", "${PROJECT_DIR}/Coral-Pandas-Agent/run_agent.sh main.py"]
+      command: ["bash", "-c", "/root/Coral-Pandas-Agent/run_agent.sh main.py"]
       environment:
         - name: "API_KEY"
           from: "API_KEY"
@@ -211,6 +211,7 @@ registry:
           value: "16000"
         - name: "MODEL_TEMPERATURE"
           value: "0.3"
+
 
 ```
 
