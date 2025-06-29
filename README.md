@@ -150,6 +150,8 @@ yarn -v
 
 #### 1. Executable Mode
 
+<details>
+
 - The Executable Model is part of the Coral Protocol Orchestrator which works with [Coral Studio UI](https://github.com/Coral-Protocol/coral-studio).  
 
 - Checkout: [How to Build a Multi-Agent System with Awesome Open Source Agents using Coral Protocol](https://github.com/Coral-Protocol/existing-agent-sessions-tutorial-private-temp).  
@@ -161,8 +163,6 @@ yarn -v
 - Run the [Coral Server](https://github.com/Coral-Protocol/coral-server) and [Coral Studio UI](https://github.com/Coral-Protocol/coral-studio). 
 
 - You do not need to set up the `.env` in the project directory for running in this mode; it will be captured through the variables below.  
-
-<details>
 
 ```bash
 # replace "root" with YOUR/PROJECT/DIRECTORY if different
@@ -223,11 +223,11 @@ registry:
 
 #### 2. Dev Mode
 
+<details>
+
 - The Dev Mode allows the Coral Server and all agents to be seaprately running on each terminal without UI support.  
 
 - Ensure that the [Coral Server](https://github.com/Coral-Protocol/coral-server) is running on your system and run below commands in separate terminals.
-
-<details>
 
 Run the Interface Agent
 
