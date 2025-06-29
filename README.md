@@ -100,9 +100,10 @@ yarn dev --host
 
 ![Coral Server and Studio Running](images/server-studio.png)
 
-- Install yarn if UNAVAILABLE in order to run Coral Studio
 
 <details>
+
+<summary>Install yarn if UNAVAILABLE in order to run Coral Studio</summary>
 
 ```bash
 # Download and install nvm:
