@@ -63,15 +63,19 @@ Each team leader of the Vultr Track will receive a coupon code to claim $250 in 
 
 - Sign up on Vultr and know more by looking into the [product documentation](https://docs.vultr.com/products)
 
-- Choose and host an instance as per your system requirements
+- Choose and host an instance as per your system requirements (Ubuntu: 22.0.4 recommended)
 
 ![Vultr Instance](images/vultr-instance.png)
 
-- SSH into the instance (check IP) and enter the password of your instance
+- Open terminal in your laptop, SSH into the instance (check IP) and enter the password of your instance
 
 ```bash
 ssh root@95.179.233.169
 ```
+- It is also useful to connect to same instance by [WinSCP](https://winscp.net/eng/index.php) which can help edit files within your server. Connect using your Vultr credentials after installation.
+
+![Vultr Instance](images/winscp.png)
+
 </details>
 
 ### 2. Setup Coral Server and Coral Studio
