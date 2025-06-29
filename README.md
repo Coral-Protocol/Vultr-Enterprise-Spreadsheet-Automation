@@ -155,13 +155,11 @@ You can run in either of the below modes to get your system running.
 
 Checkout: [How to Build a Multi-Agent System with Awesome Open Source Agents using Coral Protocol](https://github.com/Coral-Protocol/existing-agent-sessions-tutorial-private-temp) and update the file: `coral-server/src/main/resources/application.yaml` with the details below, then run the [Coral Server](https://github.com/Coral-Protocol/coral-server) and [Coral Studio UI](https://github.com/Coral-Protocol/coral-studio). You do not need to set up the `.env` in the project directory for running in this mode; it will be captured through the variables below.  
 
-You can use WinSCP to make change in the file:
+You can use WinSCP to make change in the file by copying the below command.
 
 ![Vultr Instance](images/application-changes.png)
 
 <details>
-
-For Linux or MAC:
 
 ```bash
 # replace "root" with YOUR/PROJECT/DIRECTORY if different
@@ -218,13 +216,6 @@ registry:
 
 
 ```
-
-For Windows, create a powershell command (run_agent.ps1) and run:
-
-```bash
-command: ["powershell","-ExecutionPolicy", "Bypass", "-File", "${PROJECT_DIR}/run_agent.ps1","main.py"]
-```
-
 </details>
 
 #### 2. Dev Mode
