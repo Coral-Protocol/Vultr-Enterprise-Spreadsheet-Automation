@@ -102,12 +102,14 @@ Install Java
 
 ```bash
 
+# Apt update
 sudo apt update
 
+# Install the JDK
 sudo apt install openjdk-17-jdk
 
+# Check version
 java -version
-
 ```
 
 Run Coral Server
