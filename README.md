@@ -271,7 +271,22 @@ uv run python main.py
 
 </details>
 
-## Example 
+### 5. Example
+
+<details>
+
+```bash
+# Input:
+For https://raw.githubusercontent.com/pandas-dev/pandas/main/doc/data/titanic.csv how describe me the columns"
+
+#Output:
+The agent will respond back with the column description.
+
+```
+
+![Vultr Instance](images/example.png)  
+
+</details>
 
 </details>
 
