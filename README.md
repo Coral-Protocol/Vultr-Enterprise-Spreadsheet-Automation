@@ -65,6 +65,8 @@ Each team leader of the Vultr Track will receive a coupon code to claim $250 in 
 
 - Agents:  [Coral Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent) | [Coral Pandas Agent](https://github.com/Coral-Protocol/Coral-Pandas-Agent)
 
+- [Demo video](https://drive.google.com/file/d/1JlGDdraESduyIm44QvnJT2aiUzaRoi02/view?usp=sharing)
+
 <details>
 
 ### 1. Set up Vultr
