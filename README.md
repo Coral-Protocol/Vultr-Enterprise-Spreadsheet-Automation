@@ -94,29 +94,37 @@ ssh root@95.179.233.169
 
 - After you are logged into Vultr from your terminal, it is time to setup the [Coral Server](https://github.com/Coral-Protocol/coral-server) and [Coral Studio UI](https://github.com/Coral-Protocol/coral-studio). Follow the steps given in repository to install.
 
-- In order to test if both are working, open the same instance in two terminals and run both simultaneously.
+<details>
 
-- Ensure the server’s firewall allows incoming connections on port 5173 (or the port Studio is using). You may need to open this port using a command like
+<summary>Install Java if UNAVAILABLE in order to run Coral Server</summary>
+
+Install Java
 
 ```bash
 
-# allow external port access
-sudo ufw allow 5173
+sudo apt update
 
-# run studio using --host
-yarn dev --host
+sudo apt install openjdk-17-jdk
+
+java -version
+
 ```
-- You will see both running like this simultaneously if succesful and should be able to access Coral Studio from your browser.
 
-![Coral Server and Studio Running](images/server-studio.png)
+Run Coral Server
 
-- On Coral Studio, ensure the connection to Coral Server.
+```bash
 
-![Coral Server and Studio Connection UI](images/coral-connection.png)
+./gradlew run
+
+```
+
+</details>
 
 <details>
 
-<summary>Install yarn if UNAVAILABLE in order to run Coral Studio</summary>
+<summary>Install Yarn if UNAVAILABLE in order to run Coral Studio</summary>
+
+Install Yarn
 
 ```bash
 # Download and install nvm:
@@ -137,8 +145,40 @@ corepack enable yarn
 
 # Verify Yarn version:
 yarn -v
+
+# Install from yarn
+yarn install
 ```
+
+Run Coral Studio
+
+```bash
+
+yarn dev
+
+```
+
 </details>
+
+- In order to test if both are working, open the same instance in two terminals and run both simultaneously.
+
+- Ensure the server’s firewall allows incoming connections on port 5173 (or the port Studio is using). You may need to open this port using a command like
+
+```bash
+
+# allow external port access
+sudo ufw allow 5173
+
+# run studio using --host
+yarn dev --host
+```
+- You will see both running like this simultaneously if succesful and should be able to access Coral Studio from your browser.
+
+![Coral Server and Studio Running](images/server-studio.png)
+
+- On Coral Studio, ensure the connection to Coral Server.
+
+![Coral Server and Studio Connection UI](images/coral-connection.png)
 
 </details>
 
