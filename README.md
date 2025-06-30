@@ -53,7 +53,17 @@ Each team leader of the Vultr Track will receive a coupon code to claim $250 in 
 
 </details>
 
-### Vultr Track: How to setup Coral on Vultr
+### Vultr Track: Spreadsheet Query Agent
+
+- The purpose of this example is to show how to setup and run Coral using Vultr Cloud.
+
+- Below is a simple demonstration of an agentic system to answer any queries with respect to any spreadsheet.
+
+- Either upload the spreadsheet and provide a folder path or upload in Drive or GitHub and provide a public URL.
+
+- In this example we are using the Titanic spreadsheet- "https://raw.githubusercontent.com/pandas-dev/pandas/main/doc/data/titanic.cs"
+
+-Agents:  [Coral Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent) | [Coral Pandas Agent](https://github.com/Coral-Protocol/Coral-Pandas-Agent)
 
 <details>
 
