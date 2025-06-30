@@ -170,6 +170,7 @@ yarn -v
 
 ```bash
 # replace "root" with YOUR/PROJECT/DIRECTORY if different
+# update model according to requirement
 
 applications:
   - id: "app"
@@ -188,34 +189,34 @@ registry:
         description: "API key for the service"
     runtime:
       type: "executable"
-      command: ["bash", "-c", "/root/Coral-Interface-Agent/run_agent.sh main.py"]
+      command: ["bash", "-c", "/root/run_agent.sh main.py"]
       environment:
         - name: "API_KEY"
           from: "API_KEY"
         - name: "MODEL_NAME"
-          value: "gpt-4.1"
+          value: "llama-3.3-70b-versatile"
         - name: "MODEL_PROVIDER"
-          value: "openai"
+          value: "groq"
         - name: "MODEL_TOKEN"
           value: "16000"
         - name: "MODEL_TEMPERATURE"
           value: "0.3"
           
-  pandas:
+  langchain-pandas:
     options:
       - name: "API_KEY"
         type: "string"
         description: "API key for the service"
     runtime:
       type: "executable"
-      command: ["bash", "-c", "/root/Coral-Pandas-Agent/run_agent.sh main.py"]
+      command: ["bash", "-c", "/root/run_agent.sh main.py"]
       environment:
         - name: "API_KEY"
           from: "API_KEY"
         - name: "MODEL_NAME"
-          value: "gpt-4.1"
+          value: "llama-3.3-70b-versatile"
         - name: "MODEL_PROVIDER"
-          value: "openai"
+          value: "groq"
         - name: "MODEL_TOKEN"
           value: "16000"
         - name: "MODEL_TEMPERATURE"
@@ -269,6 +270,8 @@ uv run python main.py
 </details>
 
 </details>
+
+## Example 
 
 </details>
 
