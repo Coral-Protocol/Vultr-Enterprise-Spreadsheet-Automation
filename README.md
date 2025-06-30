@@ -277,7 +277,7 @@ uv run python main.py
 
 ```bash
 # Input:
-For https://raw.githubusercontent.com/pandas-dev/pandas/main/doc/data/titanic.csv how describe me the columns"
+For https://raw.githubusercontent.com/pandas-dev/pandas/main/doc/data/titanic.csv describe me the columns in the data."
 
 #Output:
 The agent will respond back with the column description.
