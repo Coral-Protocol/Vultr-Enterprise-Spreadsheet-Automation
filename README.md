@@ -14,6 +14,8 @@
 
 - [Demo video](https://drive.google.com/file/d/1JlGDdraESduyIm44QvnJT2aiUzaRoi02/view?usp=sharing)
 
+![Vultr Workflow](images/vultr_worflow.png)
+
 ### Outline
 
 - **Setup Vultr**  
