@@ -16,7 +16,7 @@
 
 ### Outline
 
-- **Setup Vultr**
+- **Setup Vultr**  
    Step-by-step guide to setup Vultr 
 
 - **Setup Coral Server and Coral Studio**  
@@ -30,7 +30,7 @@
   - Executable Mode with Coral Studio Orchestrator  
   - Dev Mode (terminal-based) for easier debugging  
 
-- **Example**
+- **Example**  
   Sample input and output to get results.
 
 ### How to run step by step
