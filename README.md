@@ -25,7 +25,7 @@
   Step-by-step guide to install and run Coral Server and Coral Studio with necessary dependencies (Java, Yarn, Node.js).
 
 - **Setup the Agents**  
-  Instructions to install and configure the Interface Agent and Restaurant Voice Agent using uv.
+  Instructions to install and configure the agents.
 
 - **Run the Agents**  
   Available options to run agents:
