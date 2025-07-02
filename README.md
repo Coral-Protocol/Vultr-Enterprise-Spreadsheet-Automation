@@ -318,4 +318,4 @@ The agent will respond back with the column description.
 
 ### Where to find support 
 
-For support: [Discord](https://discord.com/invite/Xjm892dtt3)
+If you have any questions about anything you can join our discord here, and put something in the dev support channel, if you beleivie it to be a bug or a feate that you want you can add it as a github issue https://discord.gg/HaTjdMGBHc
