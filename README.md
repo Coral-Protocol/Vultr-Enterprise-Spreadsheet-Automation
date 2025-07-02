@@ -1,5 +1,5 @@
 # Vultr Enterprise Spreadsheet Automation
- This guide helps you build an AI-powered e-commerce app for the Vultr Challenge using Coral Protocol and multi-agent collaboration. Follow step-by-step setup instructions for agents, server, and UI.
+ This guide helps you build an Enterprise Spreadsheet Automation app for the Vultr Challenge using Coral Protocol and multi-agent collaboration. Follow step-by-step setup instructions for agents, server, and UI.
 
 
 ### Introduction
