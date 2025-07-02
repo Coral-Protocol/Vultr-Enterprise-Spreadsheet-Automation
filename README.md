@@ -33,6 +33,8 @@
 - **Example**
   Sample input and output to get results.
 
+### How to run step by step
+
 ### 1. Set up Vultr
 
 <details>
@@ -313,6 +315,6 @@ The agent will respond back with the column description.
 </details>
 
 
-### Support 
+### Where to find support 
 
 For support: [Discord](https://discord.com/invite/Xjm892dtt3)
