@@ -1,6 +1,7 @@
 # Vultr Enterprise Spreadsheet Automation
  This guide helps you build an Enterprise Spreadsheet Automation app for the Vultr Challenge using Coral Protocol and multi-agent collaboration. Follow step-by-step setup instructions for agents, server, and UI.
 
+![Vultr Workflow](images/vultr_worflow.png)
 
 ### Introduction
 
@@ -13,8 +14,6 @@
 - Agents:  [Coral Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent) | [Coral Pandas Agent](https://github.com/Coral-Protocol/Coral-Pandas-Agent)
 
 - [Demo video](https://drive.google.com/file/d/1JlGDdraESduyIm44QvnJT2aiUzaRoi02/view?usp=sharing)
-
-![Vultr Workflow](images/vultr_worflow.png)
 
 ### Outline
 
