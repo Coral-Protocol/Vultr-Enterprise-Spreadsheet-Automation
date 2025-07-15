@@ -11,7 +11,7 @@
 
 - In this example we are using the Titanic spreadsheet: `https://raw.githubusercontent.com/pandas-dev/pandas/main/doc/data/titanic.cs`.
 
-- Agents:  [Coral Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent) | [Coral Pandas Agent](https://github.com/Coral-Protocol/Coral-Pandas-Agent)
+- Agents:  [Coral Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent) | [Coral Pandas Agent](https://github.com/Coral-Protocol/Coral-Pandas-Agent) | [Coral ACIdev agent](https://github.com/Coral-Protocol/Coral-AciDevMCP-Agent/tree/pydantic-ai)
 
 - [Demo video](https://drive.google.com/file/d/1JlGDdraESduyIm44QvnJT2aiUzaRoi02/view?usp=sharing)
 
@@ -20,15 +20,14 @@
 - **Setup Vultr**  
    Step-by-step guide to setup Vultr 
 
-- **Setup Coral Server and Coral Studio**  
-  Step-by-step guide to install and run Coral Server and Coral Studio with necessary dependencies (Java, Yarn, Node.js).
+- **Setup Coral Server**  
+  Step-by-step guide to install and run Coral Server with necessary dependencies (Java).
 
 - **Setup the Agents**  
   Instructions to install and configure the agents.
 
 - **Run the Agents**  
   Available options to run agents:
-  - Executable Mode with Coral Studio Orchestrator  
   - Dev Mode (terminal-based) for easier debugging  
 
 - **Example**  
@@ -57,11 +56,11 @@ ssh root@95.179.233.169
 
 </details>
 
-### 2. Setup Coral Server and Coral Studio
+### 2. Setup Coral Server 
 
 <details>
 
-- After you are logged into Vultr from your terminal, it is time to setup the [Coral Server](https://github.com/Coral-Protocol/coral-server) and [Coral Studio UI](https://github.com/Coral-Protocol/coral-studio). Follow the steps given in repository to install.
+- After you are logged into Vultr from your terminal, it is time to setup the [Coral Server](https://github.com/Coral-Protocol/coral-server). Follow the steps given in repository to install.
 
 <details>
 
@@ -91,69 +90,8 @@ Run Coral Server
 
 </details>
 
-<details>
-
-<summary>Install Yarn if UNAVAILABLE in order to run Coral Studio</summary>
-
-Install Yarn
-
-```bash
-# Download and install nvm:
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-
-# in lieu of restarting the shell
-\. "$HOME/.nvm/nvm.sh"
-
-# Download and install Node.js:
-nvm install 22
-
-# Verify the Node.js version:
-node -v # Should print "v22.17.0".
-nvm current # Should print "v22.17.0".
-
-# Download and install Yarn:
-corepack enable yarn
-
-# Verify Yarn version:
-yarn -v
-
-# Install from yarn
-yarn install
-
-# Allow port for eternal access
-sudo ufw allow 5173
-
-```
-
-Run Coral Studio
-
-```bash
-
-yarn dev --host
-
-```
 
 </details>
-
-- In order to test if both are working, open the same instance in two terminals and run both simultaneously.
-
-- Ensure the server’s firewall allows incoming connections on port 5173 (or the port Studio is using). You may need to open this port using a command like
-
-```bash
-
-# allow external port access
-sudo ufw allow 5173
-
-# run studio using --host
-yarn dev --host
-```
-- You will see both running like this simultaneously if succesful and should be able to access Coral Studio from your browser.
-
-![Coral Server and Studio Running](images/server-studio.png)
-
-- On Coral Studio, ensure the connection to Coral Server.
-
-![Coral Server and Studio Connection UI](images/coral-connection.png)
 
 </details>
 
@@ -162,8 +100,8 @@ yarn dev --host
 
 <details>  
 
-- Terminate the Coral Server and Coral Studio connections from above and start below steps.
-- In this example, we are using the agents: [Coral Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent) and [Coral Pandas Agent](https://github.com/Coral-Protocol/Coral-Pandas-Agent).  
+- Terminate the Coral Server from above and start below steps.
+- In this example, we are using the agents: [Coral Voice Interface Agent](https://github.com/Coral-Protocol/Coral-VoiceInterface-Agent) , [Coral Pandas Agent](https://github.com/Coral-Protocol/Coral-Pandas-Agent) and [Coral ACIdev agent](https://github.com/Coral-Protocol/Coral-AciDevMCP-Agent/tree/pydantic-ai).  
 - Please click on the link and set up the agents by following the setup instructions in the repository.  
 - Check the output below to see how the terminal will look after succesfull installation, keep in mind the directory you are at while doing `uv sync`.
 
@@ -175,94 +113,9 @@ yarn dev --host
 
 <details>
 
-<summary>You can run in either of the below modes to get your system running.</summary>
+<summary>You can run the agents in dev mode via terminal.</summary>
 
-#### 1. Executable Mode
-
-<details>
-
-- The Executable Mode is part of the Coral Protocol Orchestrator which works with [Coral Studio UI](https://github.com/Coral-Protocol/coral-studio).  
-
-- Checkout: [How to Build a Multi-Agent System with Awesome Open Source Agents using Coral Protocol](https://github.com/Coral-Protocol/existing-agent-sessions-tutorial-private-temp).  
-
-- Update the file: `coral-server/src/main/resources/application.yaml` with the details below. You can use WinSCP to make change in the file by copying the below command.
-
-![Vultr Instance](images/application-changes.png)  
-
-<details>
-
-<summary>Expand this to update `application.yaml` with this code</summary>
-
-```bash
-# replace "root" with YOUR/PROJECT/DIRECTORY if different
-# update model according to requirement
-
-applications:
-  - id: "app"
-    name: "Default Application"
-    description: "Default application for testing"
-    privacyKeys:
-      - "default-key"
-      - "public"
-      - "priv"
-
-registry:
-  interface:
-    options:
-      - name: "API_KEY"
-        type: "string"
-        description: "API key for the service"
-    runtime:
-      type: "executable"
-      command: ["bash", "-c", "/root/run_agent.sh main.py"]
-      environment:
-        - name: "API_KEY"
-          from: "API_KEY"
-        - name: "MODEL_NAME"
-          value: "llama-3.3-70b-versatile"
-        - name: "MODEL_PROVIDER"
-          value: "groq"
-        - name: "MODEL_TOKEN"
-          value: "16000"
-        - name: "MODEL_TEMPERATURE"
-          value: "0.3"
-          
-  langchain-pandas:
-    options:
-      - name: "API_KEY"
-        type: "string"
-        description: "API key for the service"
-    runtime:
-      type: "executable"
-      command: ["bash", "-c", "/root/run_agent.sh main.py"]
-      environment:
-        - name: "API_KEY"
-          from: "API_KEY"
-        - name: "MODEL_NAME"
-          value: "llama-3.3-70b-versatile"
-        - name: "MODEL_PROVIDER"
-          value: "groq"
-        - name: "MODEL_TOKEN"
-          value: "16000"
-        - name: "MODEL_TEMPERATURE"
-          value: "0.3"
-
-
-```
-
-</details>
-
-- Run the [Coral Server](https://github.com/Coral-Protocol/coral-server) and [Coral Studio](https://github.com/Coral-Protocol/coral-studio). 
-
-- You do not need to set up the `.env` in the project directory for running in this mode; it will be captured through the variables below.  
-
-- After the agents are loaded properly, you will see "2 agents" connected. Proceed ahead with "Select Session", add the agents, api key and esure to add both the Custom Tools to the Interface Agent.
-
-![Vultr Instance](images/agent-connected.png)  
-
-</details>
-
-#### 2. Dev Mode
+#### 1. Dev Mode
 
 <details>
 
@@ -272,14 +125,14 @@ registry:
 
 - Ensure that you have setup the `.env` file with required keys.  
 
-Run the Interface Agent
+Run the Voice Interface Agent
 
 ```bash
 # cd to directory
-cd Coral-Interface-Agent
+cd Coral-VoiceInterface-Agent
 
 # Run the agent using `uv`:
-uv run python main.py
+uv run  main.py console
 ```
 
 Run the Pandas Agent
@@ -289,7 +142,15 @@ Run the Pandas Agent
 cd Coral-Pandas-Agent
 
 # Run the agent using `uv`:
-uv run python main.py
+uv run main.py
+```
+Run the ACIdev agent 
+```bash
+#cd to the directory
+cd Coral-AciDevMCP-Agent
+
+#Run the agent using 'uv'
+uv run main.py
 ```
 
 </details>
@@ -301,15 +162,20 @@ uv run python main.py
 <details>
 
 ```bash
+You have to give a voice input like this
 # Input:
-For https://raw.githubusercontent.com/pandas-dev/pandas/main/doc/data/titanic.csv describe me the columns in the data."
+ask the pandas agent to describe me the coloums for 'titanic.csv' 
 
 #Output:
 The agent will respond back with the column description.
 
-```
+#Input:
+then you can ask it to send this information to the ACIdev agent and email to xyz@gmail.com with the subject of Data Description.
 
-![Vultr Instance](images/example.png)  
+#Output:
+The email will be sent.
+
+```
 
 </details>
 
